@@ -3,7 +3,7 @@ import Location from './Location';
 import WeatherData from './WeatherData';
 
 const WeatherLocation = () => (
-	<div>Weather Location
+	<div>
 		<Location />
 		<WeatherData />
 	</div>
