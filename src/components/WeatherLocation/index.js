@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import Location from './Location';
 import WeatherData from './WeatherData';
-import {CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY} from './../../constants/weathers';
+import transformWeather from './../../services/transformWeather';
 import './style.css';
+import {CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY} from './../../constants/weathers';
+
+const location = "London, UK";
+const api_key = '1950864f7ff27d459cc2c7c3462b0430';
+const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}=&appid=${api_key}`;
+
 
 const data1 = {
 	temperature: 18,
@@ -11,27 +17,27 @@ const data1 = {
 	wind: '10 m/s'
 };
 
-const data2 = {
-	temperature: 33,
-	weatherState: WINDY,
-	humidity: 45,
-	wind: '45 m/s'
-};
-
 
 class WeatherLocation extends Component{
 	constructor(){
 		super();
 		this.state = {
-			city: 'Buenos Aires',
+			city: 'London',
 			data: data1
 		}
 	}
 
+
 	handleUpdateClick = () => {
-		this.setState( {
-			city: 'London',
-			data: data2
+		fetch(api_weather).then(data => {
+			console.log(api_weather);
+			return data.json();
+		}).then(weather_data => {
+
+			const data = transformWeather(weather_data);
+
+			this.setState({data: data});
+			console.log(weather_data);
 		});
 	}
 
