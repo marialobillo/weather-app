@@ -5,7 +5,7 @@ import {CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY} from './../../../constants/weathe
 import './styles.css';
 
 const WeatherData = () => (
-	<div className="">
+	<div className="weatherDataCont">
 		<WeatherTemperature
 			temperature={20}
 			weatherState={SNOW}
