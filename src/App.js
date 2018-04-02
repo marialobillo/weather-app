@@ -12,9 +12,9 @@ const cities = [
 	'Santiago, Chile'
 ];
 class App extends Component {
-	
+
 	handleSelectionLocation = (city) => {
-		console.log('handleSelectionLocation');
+		console.log('handleSelectionLocation --> ' + city);
 	}
 	render() {
 		return (

@@ -24,22 +24,6 @@ class WeatherLocation extends Component{
 		}
 	}
 
-/*
-	handleUpdateClick = () => {
-		fetch(api_weather).then(data => {
-			console.log(api_weather);
-			return data.json();
-		}).then(weather_data => {
-
-			const data = transformWeather(weather_data);
-
-			this.setState({data: data});
-			console.log(weather_data);
-		});
-	}
-
-	*/
-
 	componentWillMount(){
 		const {city} = this.state;
 		const api_weather = `${url}?q=${city}&appid=${api_key}`;
