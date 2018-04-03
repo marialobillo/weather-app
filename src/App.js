@@ -16,11 +16,20 @@ const cities = [
 	'Santiago, Chile'
 ];
 class App extends Component {
-
+	constructor(){
+		super();
+		this.state = {
+			city: 'Nueva Ciudad'
+		};
+	}
 	handleSelectionLocation = (city) => {
+		this.setState({
+			city: city
+		});
 		console.log('handleSelectionLocation --> ' + city);
 	}
 	render() {
+		const {city} = this.state;
 		return (
 			<MuiThemeProvider>
 				<Grid>
@@ -40,7 +49,7 @@ class App extends Component {
 
 									<Paper>
 										<div className="details">
-											<ForecastExtended />
+											<ForecastExtended city={city}></ForecastExtended>
 										</div>
 									</Paper>
 
