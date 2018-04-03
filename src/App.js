@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import './App.css';
@@ -39,7 +40,8 @@ class App extends Component {
 
 									<Paper>
 										<div className="details">
-												</div>
+											<ForecastExtended />
+										</div>
 									</Paper>
 
 							</Col>
