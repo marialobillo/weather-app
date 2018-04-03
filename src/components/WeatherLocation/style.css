@@ -1,7 +1,10 @@
 
 .WeatherLocationCont{
-	width: 420px;
-	margin: 20px;
+	width: calc(100% - 30px);
+	min-width: 420px;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
 	padding: 1px 35px 5px 5px;
 	font-family: 'Roboto', 'Sans-serif';
 

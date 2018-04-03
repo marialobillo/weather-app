@@ -1,0 +1,11 @@
+.LocationList{
+	background: red;
+}
+
+@media(max-width: 64em){
+	.LocationList{
+		max-height: 30vh;
+		overflow: auto;
+		margin-bottom: 20px;
+	}
+}
