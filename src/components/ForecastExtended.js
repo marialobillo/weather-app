@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ForecastItem from './ForecastItem';
 import './style.css';
 
+
 const renderForecastItemDays = (forecastData) => {
 		return forecastData.map( forecast => (
 				<ForecastItem
@@ -30,5 +31,6 @@ ForecastExtended.propTypes = {
 		city: PropTypes.string.isRequired,
 		forecastData: PropTypes.array,
 }
+
 
 export default ForecastExtended;
