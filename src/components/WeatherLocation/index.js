@@ -9,7 +9,6 @@ import './style.css';
 
 //const city = "London, UK";
 const api_key = '1950864f7ff27d459cc2c7c3462b0430';
-//const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${city}=&appid=${api_key}`;
 const url = 'http://api.openweathermap.org/data/2.5/weather';
 
 
