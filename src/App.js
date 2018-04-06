@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+import propTypes from 'prop-types';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended';
@@ -53,7 +54,6 @@ class App extends Component {
 									></LocationList>
 							</Col>
 							<Col xs={12} md={6}>
-
 									<Paper>
 										<div className="details">
 											{city &&
@@ -61,7 +61,6 @@ class App extends Component {
 											}
 										</div>
 									</Paper>
-
 							</Col>
 						 </Row>
 				</Grid>
@@ -70,8 +69,11 @@ class App extends Component {
 	}
 }
 
+App.propTypes = {
+	setCity: propTypes.func.isRequired,
+}
 
-const mapDispatchToPropsActions = (dispatch) => ({
+const mapDispatchToPropsActions = dispatch => ({
 	setCity: value => dispatch(setCity(value))
 });
 
